@@ -5,21 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './main.html';
 import './myAccounts.html';
+import './addProfile.html';
 
-Template.hello.onCreated(function helloOnCreated() {
-  // counter starts at 0
-  this.counter = new ReactiveVar(0);
-});
-
-Template.hello.helpers({
-  counter() {
-    return Template.instance().counter.get();
-  },
-});
-
-Template.hello.events({
-  'click button'(event, instance) {
-    // increment the counter when button is clicked
-    instance.counter.set(instance.counter.get() + 1);
-  },
-});
+import '../lib/collection.js';
+import './myAccounts.js';
+import './addProfile.js';
