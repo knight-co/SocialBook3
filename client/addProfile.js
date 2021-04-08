@@ -5,20 +5,7 @@ Template.addProfile.events({
         let profFirst = $('#firstName').val();
         let profLast = $('#lastName').val();
         let profAge = $('#age').val();
-        // reset each input box
-        $("#profPic").removeClass("invalidWarn");
-        $("#firstName").removeClass("invalidWarn");
-        $("#lastName").removeClass("invalidWarn");
-        $("#age").removeClass("invalidWarn");
-        if (profPic == "")
-            $("#profPic").addClass("invalidWarn");
-        else if (profFirst == "")        
-            $("#firstName").addClass("invalidWarn");
-        else if (profLast == "")
-            $("#lastName").addClass("invalidWarn");
-        else if (profAge == "")
-            $("#age").addClass("invalidWarn");
-        else {
+        if (isAddFormValid(profPic, profFirst, profLast, profAge)){
             // Save data into collection
             profilesdb.insert({
                 "pPic":profPic,
@@ -40,3 +27,29 @@ Template.addProfile.events({
         document.getElementById("preImg").src = profPic;
     }
 });
+
+isAddFormValid = function(pic, first, last, age){
+    let isValid = true;
+    // reset each input box
+    $("#profPic").removeClass("invalidWarn");
+    $("#firstName").removeClass("invalidWarn");
+    $("#lastName").removeClass("invalidWarn");
+    $("#age").removeClass("invalidWarn");
+    if (pic == ""){
+        $("#profPic").addClass("invalidWarn");
+        isValid = false;
+    }
+    if (first == ""){
+        $("#firstName").addClass("invalidWarn");
+        isValid = false;
+    }
+    if (last == ""){
+        $("#lastName").addClass("invalidWarn");
+        isValid = false;
+    }
+    if (age == ""){
+        $("#age").addClass("invalidWarn");
+        isValid = false;
+    }
+    return isValid;
+}
