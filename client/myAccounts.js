@@ -1,6 +1,8 @@
 Template.myAccounts.helpers({
     theProfiles(){
-        return profilesdb.find({}, {limit: Session.get("profLimit")});
+        if (Session.get("filter") === "All")
+          return profilesdb.find({}, {limit: Session.get("profLimit")});
+        return profilesdb.find({"pGen": Session.get("filter")} , {limit: Session.get("profLimit")});
     }
 });
 

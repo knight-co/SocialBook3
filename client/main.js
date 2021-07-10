@@ -10,8 +10,11 @@ import './myAccounts.html';
 import './addProfile.html';
 import './confirmDel.html';
 import './editProfile.html';
+import './filter.html';
+
 
 import '../lib/collection.js';
 import './myAccounts.js';
 import './addProfile.js';
 import './infinitescroll.js';
+import './filter.js';
