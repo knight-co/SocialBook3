@@ -1,5 +1,7 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
+import { Session } from 'meteor/session';
+
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -12,4 +14,4 @@ import './editProfile.html';
 import '../lib/collection.js';
 import './myAccounts.js';
 import './addProfile.js';
-import './editProfile.js';
+import './infinitescroll.js';
