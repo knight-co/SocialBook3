@@ -11,10 +11,19 @@ import './addProfile.html';
 import './confirmDel.html';
 import './editProfile.html';
 import './filter.html';
+import './signIn.html';
 
 
+import './signIn.js';
 import '../lib/collection.js';
 import './myAccounts.js';
 import './addProfile.js';
 import './infinitescroll.js';
 import './filter.js';
+import '../lib/userAcct.js';
+
+
+if (Meteor.userId())
+ Meteor.subscribe("profData");
+else
+ Meteor.subscribe("noUser");
