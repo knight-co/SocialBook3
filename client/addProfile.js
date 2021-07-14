@@ -5,7 +5,7 @@ Template.addProfile.events({
         let profFirst = $('#firstName').val();
         let profLast = $('#lastName').val();
         let profAge = $('#age').val();
-        let profGen = $('input[name="genderRadio"]:checked').val();
+        let profGen = $('input[name="GenderRadio"]:checked').val();
         if (isAddFormValid(profPic, profFirst, profLast, profAge)){
             // Save data into collection
             profilesdb.insert({
@@ -14,7 +14,9 @@ Template.addProfile.events({
                 "pLast":profLast,
                 "pAge":profAge,
                 "pGen":profGen,
-                "POwn":Meteor.userId()
+                "pOwn":Meteor.userId(),
+                "pName":Meteor.user().username,
+                 "createdOn": new Date().getTime()
 
             });
             // clear input boxes

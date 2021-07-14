@@ -13,13 +13,18 @@
                     <div class="myInfo">
                         <p class="fs-4">{{pFirst}} {{pLast}}, Lv{{pAge}}</p>
 
-                        <div>
-                            {{#if currentUser}}
-                                    <i class="fa fa-pencil js-edit" aria-hidden="true"></i>
-                                <i class="fa fa-trash js-delete" aria-hidden="true"></i>
-                            {{/if}}                    
-                        </div>
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="col-md-6">
+                            posted by {{pName}}
 
+                        </div>
+                            <div class="col-md-2">
+                                {{#if currentUser}}
+                                    <i class="fa fa-pencil js-edit" aria-hidden="true"></i>
+                                    <i class="fa fa-trash js-delete" aria-hidden="true"></i>
+                                {{/if}}                    
+                            </div>
                     </div>
                 </div>
             </div>

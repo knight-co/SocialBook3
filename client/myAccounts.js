@@ -1,9 +1,24 @@
 Template.myAccounts.helpers({
     theProfiles(){
+        let prevTime = Date.now() - 15000;
+        let results = profilesdb.find({createdOn: {$gte: prevTime}}).count();
+        if (results > 0){
+            return profilesdb.find({} ,{sort:{createOn: -1},limit: Session.get("profLimit")});
+        }else{
+            
         if (Session.get("filter") === "All")
           return profilesdb.find({}, {limit: Session.get("profLimit")});
         return profilesdb.find({"pGen": Session.get("filter")} , {limit: Session.get("profLimit")});
     }
+},
+
+    isOwner(){
+        if(this.pOwn == Meteor.userId())
+         return true;
+        else
+         return false; 
+    }
+
 });
 
 Template.myAccounts.events({
