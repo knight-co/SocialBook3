@@ -1,9 +1,11 @@
 <head>
   <title>SocialBook</title>
 </head>
-
 <body>
   <div class="container">
+    {{#if currentUser}}
+     {{> addProfile}}
+    {{/if}}
     <!--{{> signInForm}}
 
     {{#if currentUser}}
