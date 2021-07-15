@@ -12,6 +12,12 @@ Meteor.publish('profData', function(){
 
   });
 });
+Meteor.publish('proDat', function(data){
+  return profilesdb.find({_id:data}, {
+   // fields: {pFirst: 1, pLast: 0, pAge: 1}
+
+  });
+});
 
 Meteor.publish('noUser', function(){
   return profilesdb.find({}, {

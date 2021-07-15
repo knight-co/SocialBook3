@@ -5,7 +5,7 @@
                 <div class="pro-frame">
                     <div class="p-frame">
                         {{#if pPic}}
-                            <img src={{pPic}} alt="Image for Profile">
+                            <img class="w-100" src={{pPic}} alt="Image for Profile">
                         {{else}}
                             <img src="blank-profile_640.png" alt="Generic Image for Profile">
                         {{/if}}
@@ -18,7 +18,8 @@
                         <div class="col-md-6">
                             Posted by {{pName}}
                         </div>
-                            <div class="col-md-2">
+                            <div class="col-md-3 text-end">
+                               <a href="/profile/{{_id}}"><i class="fa fa-eye js-view" aria-hidden="true"></i></a>
                                 {{#if isOwner}}
                                     <i class="fa fa-pencil js-edit" aria-hidden="true"></i>
                                     <i class="fa fa-trash js-delete" aria-hidden="true"></i>
