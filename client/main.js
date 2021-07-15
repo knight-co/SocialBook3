@@ -12,6 +12,7 @@ import './confirmDel.html';
 import './editProfile.html';
 import './filter.html';
 import './signIn.html';
+import './error404.html';
 
 
 import './signIn.js';
@@ -21,6 +22,7 @@ import './addProfile.js';
 import './infinitescroll.js';
 import './filter.js';
 import '../lib/userAcct.js';
+import '../lib/router.js';
 
 
 if (Meteor.userId())
