@@ -15,6 +15,7 @@ import './signIn.html';
 import './error404.html';
 import './navbar.html';
 import './viewProfile.html';
+import './randProfile.html';
 
 
 import './signIn.js';
@@ -26,4 +27,5 @@ import './filter.js';
 import '../lib/userAcct.js';
 import '../lib/router.js';
 import './viewProfile.js';
+import './randProfile.js';
 
