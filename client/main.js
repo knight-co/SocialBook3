@@ -28,4 +28,6 @@ import '../lib/userAcct.js';
 import '../lib/router.js';
 import './viewProfile.js';
 import './randProfile.js';
+import './navbar.js';
+
 
