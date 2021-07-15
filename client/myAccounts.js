@@ -3,7 +3,7 @@ Template.myAccounts.helpers({
         let prevTime = Date.now() - 15000;
         let results = profilesdb.find({createdOn: {$gte: prevTime}}).count();
         if (results > 0){
-            return profilesdb.find({} ,{sort:{createOn: -1},limit: Session.get("profLimit")});
+            return profilesdb.find({} ,{sort:{createdOn: -1},limit: Session.get("profLimit")});
         }else{
             
         if (Session.get("filter") === "All")
@@ -11,12 +11,13 @@ Template.myAccounts.helpers({
         return profilesdb.find({"pGen": Session.get("filter")} , {limit: Session.get("profLimit")});
     }
 },
+ isOwner(){
 
-    isOwner(){
-        if(this.pOwn == Meteor.userId())
-         return true;
-        else
-         return false; 
+   if(this.pOwn == Meteor.userId())
+     return true;
+    else
+     return false;
+      
     }
 
 });
@@ -51,11 +52,11 @@ Template.myAccounts.events({
         $('#editlastName').val(lname);
        $('#editage').val(age);
         $('#editModal').modal('show');
-        let genRadio = $('#editModal input[name="genderRadio"]');
-        if (gender === "male")
-         genRadio.filter('[value=male]').prop('checked', true);
+        let genRadio = $('#editModal input[name="GenderRadio"]');
+        if (gender === "Male")
+         genRadio.filter('[value=Male]').prop('checked', true);
         else
-        genRadio.filter('[value=female]').prop('checked', true);
+        genRadio.filter('[value=Female]').prop('checked', true);
 
     },
     'click .js-saveEdit'(event){
