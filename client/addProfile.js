@@ -17,6 +17,7 @@ Template.addProfile.events({
                 "pOwn":Meteor.userId(),
                 "pName":Meteor.user().username,
                  "createdOn": new Date().getTime()
+                 
 
             });
             // clear input boxes
