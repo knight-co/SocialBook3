@@ -19,6 +19,7 @@ import './randProfile.html';
 
 
 import './signIn.js';
+
 import '../lib/collection.js';
 import './myAccounts.js';
 import './addProfile.js';

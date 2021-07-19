@@ -7,5 +7,6 @@ myRandNum = function(){
 Template.randProfile.helpers({
     theProfile(){
         return profilesdb.find().fetch()[myRandNum()];
+        
     }
 });

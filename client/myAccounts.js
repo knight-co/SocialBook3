@@ -24,6 +24,7 @@ Template.myAccounts.helpers({
 
 Template.myAccounts.events({
     'click .js-delete'(event){
+        
         let myID = this._id;
         $("#confirmID").val(myID);
         $('#confirmModal').modal('show');

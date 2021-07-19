@@ -3,18 +3,18 @@ import '../lib/collection.js';
 import '../lib/userAcct.js';
 
 Meteor.startup(() => {
-  // code to run on server at startup
+ 
 });
 
 Meteor.publish('profData', function(){
   return profilesdb.find({}, {
-   // fields: {pFirst: 1, pLast: 0, pAge: 1}
+ 
 
   });
 });
 Meteor.publish('proDat', function(data){
   return profilesdb.find({_id:data}, {
-   // fields: {pFirst: 1, pLast: 0, pAge: 1}
+  
 
   });
 });

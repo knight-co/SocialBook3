@@ -10,4 +10,5 @@ $(window).scroll(function(event){
         }
         lastScrollTop = scrollTop;
     }
+    
 });

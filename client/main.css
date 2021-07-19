@@ -1,65 +1,81 @@
-body {
-  padding: 10px;
-  font-family: sans-serif;
-  background-color: rgb(13, 228, 77) !important;
-  background-image: url(https://wallpaperaccess.com/full/625416.jpg)
-}
-
-.p-frame{
-  max-height: 270px;
+.maxH
+{
+  max-height: 400px;
   overflow: hidden;
+} 
+.at-form
+{
+  border: 10px solid rgb(0, 0, 0) !important;
+  color: rgb(251, 244, 255);
 }
-
-.previewImg img{
-  width: 60%;
+.navFix
+{
+  margin-left: 40px;
 }
-
-.invalidWarn{
-  border: 2px solid #dc3545 !important;
-}
-.js-delete{
+.js-delete
+{
   cursor: pointer;
   font-size: 1.5em;
   color: #f3021a;
 }
-.js-edit{
+.js-edit
+{
   cursor: pointer;
   font-size: 1.5em;
-  color: aqua;
+  color: rgb(247, 205, 255);
 }
-.btn-default{
+.btn-default
+{
   border: 4px solid rgb(0, 0, 0) !important;
 }
-.js-view{
+.js-view
+{
   cursor: pointer;
   font-size: 1.5em;
   color: rgb(8, 172, 248);
 }
-.maxH{
-  max-height: 400px;
-  overflow: hidden;
-} 
-.at-form{
-  border: 10px solid rgb(0, 0, 0) !important;
-  color: black;
-}
-.navFix{
-  margin-left: 40px;
-}
-.navuser{
+
+.navuser
+{
   height: 55px;
   width: 110px;
   margin-right: 40px;
-  color: rgb(1, 10, 19);
-  background-color: rgb(0, 255, 115);
+  color: rgb(0, 0, 0);
+  background-color: rgb(149, 13, 228) !important;
   border-color: black;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
 
 }
-.wel{
+.wel
+{
   font-size: 200px !important;
 }
-p{
+p
+{
   font-size: 250px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body 
+{
+  padding: 10px;
+  font-family: sans-serif;
+  background-color: rgb(210, 13, 228) !important;
+  background-image: url(https://wallpaperaccess.com/full/1372803.jpg);
+  background-size: cover;
+}
+
+.p-frame
+{
+  max-height: 270px;
+  overflow: hidden;
+}
+
+.previewImg img
+{
+  width: 60%;
+}
+
+.invalidWarn
+{
+  border: 2px solid #dc3545 !important;
 }
